@@ -10,5 +10,7 @@ main()
 		b++;
 	}
 	while(a!=0);
+	if(c<0)
+		c=-c;
 	printf("sum:%d\ndigits:%d",c,b);
 }
