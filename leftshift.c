@@ -1,6 +1,6 @@
-	#include<stdio.h>
-  main()
-  {
+ #include<stdio.h>
+ main()
+ {
       int i=1,c,a,m;
       printf("enter the number and times of right shift\n");
       scanf("%d",&a);
