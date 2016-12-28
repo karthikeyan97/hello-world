@@ -2,7 +2,7 @@
  main()
  {
       int i=1,c,a,m;
-      printf("enter the number and times of right shift\n");
+      printf("enter the number and times of left shift\n");
       scanf("%d",&a);
       scanf("%d",&m);
       m=m%5;
