@@ -1,0 +1,28 @@
+#include<stdio.h>
+main()
+{
+	char c[10],b[10];
+	int count1=0,count2=0,count3=0,flag=0;
+	gets(c);
+	while(c[count1]!='\0')
+	{
+		flag=0;
+		count2=0;
+		while(count2<count3)
+			{
+				if(c[count1]==b[count2])
+					{
+						flag=1;
+						
+					}
+				count2++;
+			}
+		if(!flag)
+		{
+			b[count3++]=c[count1];
+		}
+		count1++;
+	}
+	b[count3]='\0';
+	printf("%s",b);
+}
