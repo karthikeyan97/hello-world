@@ -3,7 +3,7 @@
 int main(void) 
 {
 	// your code goes here
-		int mod,num,parr[10]={1,2,3,5,7,11,13,17,19},temp2,temp1,count1=0,count2=1,count3=0,flag=1;
+		int mod,num,parr[10]={1,2,3,5,7,11,13,17,19},temp2,temp1,count1=0,count2=1,count3=1,flag=1;
 		scanf("%d",&num);
 		mod=num;
 		while(mod!=0)
@@ -14,6 +14,7 @@ int main(void)
 
 
 		}
+		count1--;
 		temp1=count1;
 		temp2=num/count2;
 		count1=num-count2*temp2;
@@ -23,12 +24,14 @@ int main(void)
 				flag=1;
 				while(count3<temp1)
 				{
+				    
 					if(count1%parr[count3++]==0)
 						flag=0;
 
 				}
 				if(flag==1)
 				{
+				    
 					break;
 				}
 				count3=1;
@@ -36,4 +39,5 @@ int main(void)
 		printf("%d",count2*temp2+count1);
 		return 0;
 }
+
 
