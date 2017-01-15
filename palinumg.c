@@ -38,8 +38,14 @@ main()
   }
   else
   if(num4<num2)
-  {                     
-    num3=(num3+1)*temp3+rev((num3+1)*temp3);
+  {     if(count1%2==0)                
+        {
+              num3=(num3+1)*temp3+rev((num3+1)*temp3);
+        }
+         else
+         {
+              num3=(num/temp2+1)*temp2+rev((num/temp2)*temp2);
+         }
   }
   else
   {
