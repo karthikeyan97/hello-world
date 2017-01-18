@@ -71,11 +71,11 @@ int main()
 					a[nptr][nptc]=a[nptr+1][nptc];
 					a[nptr+1][nptc]=temp;
 					nptr++;
-
+			 	}
 
 			break;
 
-				}
+				
  	   }
 
     }while(choice!='q');
