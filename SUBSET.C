@@ -11,19 +11,23 @@ void main()
 	count2=n;
 	while(count2>0)
 	{
-	count1=count1*2;
-	count2--;
+		count1=count1*2;
+		count2--;
 	}
 	count1--;
 	while(count1>0)
 	{
-	count3=count1;
+		count3=count1;
 	while(count3>0)
 	{
 		if(count3%2==1)
-		printf(" %d ",a[count2++]);
+		{
+			printf(" %d ",a[count2++]);
+		}
 		else
-		count2++;
+		{	
+			count2++;
+		}
 		count3=count3/2;
 	}
 	printf("\n");
