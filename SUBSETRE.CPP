@@ -22,11 +22,14 @@ powerset(int *a,int count)
 		powerset(a,count-1);
 	}
 	else
-	printf("null set");
+	{
+		printf("null set");
+	}
 
 }
 main()
-{   clrscr();
+{   	
+	clrscr();
 	int a[3]={1,2,3},n=3;
 	powerset(a,pow(n,2)-1);
 	getch();
