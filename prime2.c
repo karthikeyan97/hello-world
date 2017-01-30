@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+main()
+{
+	int n,i=2,j,prime,*a;
+	scanf("%d",&n);
+	a=(int*)malloc(sizeof(int)*(n+30));
+	while(i<n+30)
+	{
+	a[i-2]=i++;
+	}
+	for(i=0;i<n+30;i++)
+	{
+	  if(a[i]!=0)
+			   {   
+           j=a[i]*a[i];
+           while(j<n+30)
+           {
+            a[j-2]=0;
+            j=j+a[i];
+           }
+           if(a[i]>n)
+           {
+            prime=a[i];
+            break;
+           }
+			   }
+
+	}
+	printf("%d",prime);
+	getch();
+}
