@@ -18,10 +18,12 @@ int main()
 		{
 			printf("\n");
 			for(j=0;j<16;j++)
+			{
 				printf("-");
+			}
 			printf("\n");
 			for(j=0;j<4;j++)
-				if(nptr==i&&nptc==j)
+			{	if(nptr==i&&nptc==j)
 				{
 					printf("   |");
 				}
@@ -29,6 +31,7 @@ int main()
 				{
 					printf("%2d |",a[i][j]);
 				}
+			}
 		}
 		printf("enter the choice \n 1.L-left 2.R=right 3.U-up 4.D-down 5.Q-quit");
 		if(count<50)
@@ -40,20 +43,20 @@ int main()
 			}
 			
 			else
-				if(randi==1)
-				{
-					choice='r';
-				}
-					else
-						if(randi==2)
-						{
-							choice='u';
-						}
-							else
-								if(randi==3)
-								{	
-									choice='d';
-								}
+			if(randi==1)
+			{
+				choice='r';
+			}
+			else
+			if(randi==2)
+			{
+				choice='u';
+			}
+			else
+			if(randi==3)
+			{	
+				choice='d';
+			}
 		}
 		else
 		{
