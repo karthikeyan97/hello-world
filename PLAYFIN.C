@@ -34,7 +34,7 @@ int main()
 			}
 		}
 		printf("enter the choice \n 1.L-left 2.R=right 3.U-up 4.D-down 5.Q-quit");
-		if(count<1)
+		if(count<50)
 		{
 			randi=rand()%4;
 			if(randi==0)
