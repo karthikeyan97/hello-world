@@ -34,6 +34,12 @@ main()
 	int n=n,i=0;
 	scanf("%d",&n);
 	n=n+1;
+	if(prime(n))
+	{
+		printf("\n%d",n);
+		
+	}
+	else
 	if(n%6==0)
 	{
 		if(prime(n+1))
@@ -59,3 +65,5 @@ main()
 
 
 }
+
+
