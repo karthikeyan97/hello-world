@@ -1,12 +1,12 @@
+
 #include<stdio.h>
-#include<conio.h>
 #include<stdlib.h>
 
 int main()
 {
 	int a[4][4],temp,i=1,nptr=3,nptc=3,j,randi=0,count=0,ecount=0;
 	char choice='l';
-	while(i<16)
+	while(i<=16)
 	{
 		a[(i-1)/4][(i-1)%4]=i;
 		i++;
@@ -34,9 +34,9 @@ int main()
 			}
 		}
 		printf("enter the choice \n 1.L-left 2.R=right 3.U-up 4.D-down 5.Q-quit");
-		if(count<50)
+		if(count<1)
 		{
-			randi=random(4);
+			randi=rand()%4;
 			if(randi==0)
 			{
 				choice='l';
@@ -117,21 +117,26 @@ int main()
 	   count++;
 	   for(i=0;i<4;i++)
 	   for(j=0;j<4;j++)
-	   {
-		if(a[i][j]==(i+1)*(j+1))
+	   {	
+		
+		if(a[i][j]==(i*4)+(j+1))
 		 {
 			   ecount++;
-		 }
+			printf("%d ",ecount); 
+		}
 		else
 		{
 			ecount=0;
 			break;
 		}
+	   }
 		if(ecount==16)
 		{
-		printf("you win");
+		printf("\nyou win");
 		break;
 		}
+		
+	  
 	}while(choice!='q');
 
 
