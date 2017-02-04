@@ -1,0 +1,70 @@
+#include<stdio.h>
+main()
+{
+int n,a[10],i=0,j=0,k=1;
+scanf("%d",&n);
+do
+{
+	a[i++]=n%10;
+	n=n/10;
+}while(n>0);
+if(i%2==0)
+	{
+		n=i/2-1;
+		j=n+1;
+	}
+else
+	{
+		n=i/2;
+		j=n;
+	}
+	
+while(n>=0&&j<=i-1)
+	{	
+		if(a[n]<a[j])
+		{
+			a[n--]=a[j++];
+			k=0;
+			printf("%d",k);
+			
+		}
+		else
+		if(a[n]>a[j])
+		{
+			if(i%2==0)
+			{
+				a[j]++;
+				a[n--]=a[j++];
+				k=0;
+			}
+			else
+			if(n==(i/2-1))
+			{
+				a[i/2]++;
+				k=0;
+				n=i/2;
+				j=n;
+			}
+		}
+		else
+		{
+			n--;
+			j++;
+		}
+		while(k!=1)
+		{
+			a[n--]=a[j++];
+			if(n==0)
+				k=1;
+			printf("%d",k);
+		}		
+	}
+	j=0;
+	for(n=i-1;n>=0;n++)
+	{
+		j=j*10+a[n];
+	}
+	
+	
+	printf("%d",j);	
+}
