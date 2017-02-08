@@ -1,42 +1,49 @@
 #include<stdio.h>
 #include<conio.h>
 void sor(char a[20][20],int i,int j,int n)
-{    int k,l,m=0;
+{    
+	int k=i,l=i,m=0;
 	char *b;
-for(k=i;k<j-1;k++)
-	for(l=i;l<j-k;l++)
-		{
-			while(m<n)
-				{
-					if(a[l][m]<=a[l+1][m])
+	printf("\n %d called",n);
+	printf("\ni::%d j::%d",i,j);
+	for(k=i;k<j-1;k++)
+		for(l=i;l<j-1-(k-i);l++)
+			{   	printf("\nl:: %d ",l);
+				m=0;
+				while(m<n)
+					{
+						if(a[l][m]<a[l+1][m])
 							{
-							m++;
+								m=n;
 							}
-					else
+						else
+						if(a[l][m]>a[l+1][m])
 						{
-						  strcpy(b,a[l]);
-						  strcpy(a[l],a[l+1]);
-						  strcpy(a[l+1],b);
-						  m=0;
-						  break;
+							strcpy(b,a[l]);
+							strcpy(a[l],a[l+1]);
+							strcpy(a[l+1],b);
+							m=n;
 						}
-				}
-		}
+						else
+						{
+								m++;
+						}
+					}
+			}
 
 }
 void strsor(char a[20][20],int num)
 {
 	int i=0,j=0,k=0,l=1,fla=0;
-	char *temp;
-	while(i<num)
+	char temp[20];
+	while(i<=num)
 	{
 		if(l==strlen(a[j]))
 		{
 			if(i==j)
-			{   
+			{
 				i++;
 				j++;
-
 			}
 			else
 			{
@@ -45,21 +52,20 @@ void strsor(char a[20][20],int num)
 			  strcpy(a[j],temp);
 			  i++;
 			  j++;
-			  fla=1;
+
 			}
-	 }
+		}
 		else
 		{
-		  j++;
+		j++;
 		}
 		if(j==num)
-			{
-			  sor(a,k,i-1,l);
-			  k=i;
-			  j=i;
-			  l++;
-			}
-
+		{
+			sor(a,k,i,l);
+			k=i;
+			j=i;
+			l++;
+		}
 	 }
 
 }
@@ -72,19 +78,19 @@ main()
 	scanf("%c");
 	for(k=0;k<n;k++)
 	{
-	  do
-	  {
-      scanf("%c",&m);
-      if(m!='0'||t==1)
-      {
-        a[k][i++]=m;
-        t=1;
-      }
-    }while(a[k][i-1]!='\n');
-    a[k][i-1]='\0';
-    i=0;
-    t=0;
-  }
+		do
+		{
+			scanf("%c",&m);
+			if(m!='0'||t==1)
+			{
+				a[k][i++]=m;
+				t=1;
+			}
+		}while(a[k][i-1]!='\n');
+		a[k][i-1]='\0';
+		i=0;
+		t=0;
+	}
 
 
 	strsor(a,n);
