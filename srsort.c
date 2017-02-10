@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<conio.h>
-void sor(char a[20][20],int i,int j,int n)
+void sor(char a[20][20],int i,int j,int n)//SORTING OF NUMBERS WITH SAME NUMBER OF DIGITS (BUBBLE SORT)
 {    
 	int k=i,l=i,m=0;
 	char *b;
@@ -32,7 +32,7 @@ void sor(char a[20][20],int i,int j,int n)
 			}
 
 }
-void strsor(char a[20][20],int num)
+void strsor(char a[20][20],int num)//SORTING OF NUMBERS BASED ON NUMBER OF DIGITS
 {
 	int i=0,j=0,k=0,l=1,fla=0;
 	char temp[20];
@@ -60,9 +60,11 @@ void strsor(char a[20][20],int num)
 		j++;
 		}
 		if(j==num)
-		{
-			sor(a,k,i,l);
-			k=i;
+		{	if(k!=i)
+			{
+				sor(a,k,i,l);//SORT THE ARRAY ONCE NUMBERS WITH PARTICULAR NUMBER OF DIGITS HAVE BEEN SORTED
+			}
+		 	k=i;
 			j=i;
 			l++;
 		}
