@@ -3,7 +3,12 @@
 main()
 {
   clrscr();
-  int max1=0,max2=0,a[20],i,j;
+  int max1=0,max2=0,i,j,n;
+  int *a;
+  printf("enter the no of elements\n");
+  scanf("%d",&n);
+  a=(int*)malloc(sizeof(int)*n);
+  printf("\nenter the elements\n");
   for( i=0;i<10;i++)
   {
     scanf("%d",&a[i]);
